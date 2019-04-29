@@ -1,14 +1,14 @@
 # Tooth
 java connection to server using http url connection
 This utility class for the moment accepts the following:
-1. Methods GET and POST, and GET being a default method;
-2. Parameter data as HashMap<String, String>
+1. Methods *GET* and *POST*, and *GET* being a default method;
+2. Parameter data as **HashMap<String, String>**
 
-It runs on a separate thread and has a connection listener that listens for a response or an error.
+It runs on a *separate thread* and has a connection listener that listens for a response or an error.
 
-It does not depend on a third party library.
+*It does not depend on a third party library.*
 
-## IMPLEMENTATION
+### IMPLEMENTATION
 ```java
 public void test(){
  String url = "http://api.smirl.org/tabwayane/test.php";
@@ -26,4 +26,20 @@ public void test(){
             }
         });
 }
+```
+The purpose is to create a simple and boiled down utility.
+
+It has four constructors that enables configuration.
+
+```java
+public Tooth(Method method, String url, HashMap<String, String> data, OnConnectionListener listener)
+```
+```java
+public Tooth(Method method, String url, OnConnectionListener listener)
+```
+```java
+public Tooth(String url, HashMap<String, String> data, OnConnectionListener listener)
+```
+```java
+public Tooth(String url, OnConnectionListener listener)
 ```
