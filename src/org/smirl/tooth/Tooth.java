@@ -38,6 +38,7 @@ public class Tooth {
 
     private static String USER_AGENT = "Mozilla/5.0";
     private static String ACCEPT_LANGUAGE = "en-US, en;q=0.5";
+    private static String CONTENT_TYPE = "application/x-www-form-urlencoded";
 
     public Tooth(String url, OnConnectionListener listener) {
         this(Method.GET, url, null, listener);
@@ -85,7 +86,7 @@ public class Tooth {
                     con.setUseCaches(false);
                     con.setRequestProperty("User-Agent", USER_AGENT);
                     con.setRequestProperty("Accept-Language", ACCEPT_LANGUAGE);
-                    con.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+                    con.setRequestProperty("Content-Type", CONTENT_TYPE);
                     con.setRequestProperty("charset", "utf-8");
 
                     if (method == Method.POST && params != null) {
