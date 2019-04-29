@@ -9,18 +9,3 @@ It runs on a separate thread and has a connection listener that listens for a re
 It does not depend on a third party library.
 
 # IMPLEMENTATION
-
- String url = "http://api.smirl.org/tabwayane/test.php";
-        HashMap<String, String> params = new HashMap<>();
-        params.put("y", "sikia bintu");
-        Tooth tooth = new Tooth(Tooth.Method.POST, url, params, new OnConnectionListener(){
-            @Override
-            public void onResponse(String response) {
-                System.out.println("RESPONSE : " + response);
-            }
-
-            @Override
-            public void onError(int errorCode, String error) {
-             System.out.println("ERROR : Code=" + errorCode + ", Error=" + error);
-            }
-        });
