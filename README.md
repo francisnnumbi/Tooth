@@ -29,17 +29,20 @@ public void test(){
 ```
 The purpose is to create a simple and boiled down utility.
 
-It has four constructors that enables configuration.
-
+It has four constructors that enables configuration:
+1. this is a full set constructor
 ```java
 public Tooth(Method method, String url, HashMap<String, String> data, OnConnectionListener listener)
 ```
+2. here there is no data to be sent
 ```java
 public Tooth(Method method, String url, OnConnectionListener listener)
 ```
+3. here we apply the default **GET** method
 ```java
 public Tooth(String url, HashMap<String, String> data, OnConnectionListener listener)
 ```
+4. here we apply the default **GET** method and there is no data to be sent too.
 ```java
 public Tooth(String url, OnConnectionListener listener)
 ```
