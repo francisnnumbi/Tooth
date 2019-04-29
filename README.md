@@ -1,2 +1,2 @@
 # Tooth
-java connection to server using http connection
+java connection to server using http url connection
